@@ -57,7 +57,7 @@ var CamperLeaderboard = React.createClass({
 	render:function(){
 		return (
 		<div>
-			<h1><a href="/">FCC Camper Leaderboard</a></h1>
+			<h1><a href="./">FCC Camper Leaderboard</a></h1>
 			<table>
 				<thead>
 					<tr>

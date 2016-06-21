@@ -1,0 +1,117 @@
+@import 'juice';
+$browser-prefixes: true !default;
+h1{
+	text-align:center;
+	font-size:2em;
+	font-weight:bolder;
+	cursor:pointer;
+	&:after{
+		display: block;
+		position: relative;
+		left:0;
+		bottom:-.2em;
+		width: 0;
+		height: .2em;
+		margin: 0 auto;
+		content: '';
+		transition:width 1s;
+		background-color: #22B748;
+	}
+	&:hover:after{
+		width: 80%;
+	}
+	a{
+		text-decoration: none;
+	}
+}
+table{
+	th,td{
+		border:.15em solid black;
+		text-align: center;
+		vertical-align: middle;
+	}
+	th{
+		font-size: 1.5em;
+		font-weight: bold;
+		height: 1.3em;
+	}
+	td:nth-child(2){
+		text-align: left;
+	}
+	thead{
+		tr{
+			th{
+				&:nth-child(3){
+					cursor: pointer;
+				}
+				&:nth-child(4){
+					cursor:pointer;
+				}
+			}
+		}
+	}
+	tbody{
+		tr{
+			td{
+				a{
+					text-decoration: none;
+					color: black;
+					img{
+						display: inline-block;
+						float: left;
+						width: 2em;
+						height: 2em;
+						border:.2em solid #F7F7F7;
+						border-radius:5px;
+						margin-left: .5em;
+					}
+					span{
+						display: inline-block;
+						float: left;
+						font-size:1.1em;
+						font-weight: bold;
+						line-height: 2em;
+						margin-left: .5em;
+					}
+				}
+			}
+			&:hover{
+				background-color:#F7F7F7;
+			}
+		}
+	}
+	border-collapse:collapse;
+	border:.15em solid black;
+	@include bp(small-up){
+		width: 100%;
+	}
+	@include bp(large-up){
+		width: 80%;
+		margin:0 auto;
+	}
+	tfoot{
+		tr{
+			td{
+				a{
+					text-decoration: none;
+					font-size: 1.1em;
+					font-weight: bold;
+					font-variant: small-caps;
+				}
+			}
+		}
+	}
+}
+.active{
+	background-color:#F7F7F7;
+}
+.ribbon{
+	display:none;
+	@include bp(large-up){
+		display: inline-block;
+		position: fixed;
+		top:0;
+		left:0;
+		border:0;
+	}
+}

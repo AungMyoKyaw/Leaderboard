@@ -1,0 +1,16 @@
+{
+  "name": "fcc_camper_leaderboard",
+  "version": "1.0.0",
+  "description": "FCC Camper Leaderboard",
+  "main": "index.jsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "FCC",
+    "Camper",
+    "Leaderboard"
+  ],
+  "author": "Aung Myo Kyaw",
+  "license": "ISC"
+}

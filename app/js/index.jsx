@@ -32,27 +32,36 @@ var CamperLeaderboard = React.createClass({
 	},
 	componentDidMount() {
 		var list;
-	    $.get('https://fcctop100.herokuapp.com/api/fccusers/top/recent', function(data) {
+	    $.get('https://fcctop100.herokuapp.com/api/fccusers/top/recent').done(function(data){
 	    	this.setState({
 	    		recent:data,
 	    	});
-		}.bind(this));		
+	    }.bind(this)).fail(function(){
+	    	alert('Check Your Internet Connection \n Please Reload!');
+	    	location.reload();
+	    });		
 	},
 	recent:function(){
-		$.get('https://fcctop100.herokuapp.com/api/fccusers/top/recent', function(data) {
+		$.get('https://fcctop100.herokuapp.com/api/fccusers/top/recent').done(function(data){
 			this.setState({
 				recent:data,
 				isRecent:true
 			});
-		}.bind(this));
+		}.bind(this)).fail(function(){
+			alert('Check Your Internet Connection \n Please Reload!');
+	    	location.reload();
+		});
 	},
 	alltime:function(){
-		$.get('https://fcctop100.herokuapp.com/api/fccusers/top/alltime', function(data) {
+		$.get('https://fcctop100.herokuapp.com/api/fccusers/top/alltime').done(function(data){
 			this.setState({
 				alltime:data,
 				isRecent:false
 			});
-		}.bind(this));
+		}.bind(this)).fail(function(){
+			alert('Check Your Internet Connection \n Please Reload!');
+	    	location.reload();
+		});
 	},
 	render:function(){
 		return (
